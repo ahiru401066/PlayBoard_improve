@@ -1,0 +1,11 @@
+services:
+  backend:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    container_name: playBoard_improve_container
+    volumes:
+      - ../:/app
+    command: tail -f /dev/null
+    ports:
+      - "8080:8080"
